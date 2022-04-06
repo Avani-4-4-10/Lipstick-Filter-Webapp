@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+}
+h3 {
+    font-size: 25px !important;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.btn-warning:hover {
+    background-color: red;
+}
+canvas {
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+    from{box-shadow:1px 1px 35px rebeccapurple}
+    to{box-shadow: 1px 1px 35px blue;}
+}
