@@ -1,11 +1,11 @@
-lips=""
+nose=""
 function preload(){
-lips = loadImage("https://i.postimg.cc/4x362Bn3/lipstick-removebg-preview.png")
+nose = loadImage("https://i.postimg.cc/4x362Bn3/nosetick-removebg-preview.png")
 }
 
 
-lipsX=0
-lipsY=0
+noseX=0
+noseY=0
 
 function setup(){
     canvas=createCanvas(300 , 300)
@@ -20,9 +20,9 @@ function gotPoses(results){
     if (results.length > 0){
         console.log(results)
         
-        lipsX=results[0].pose.lips.x-35;
-        lipsY=results[0].pose.lips.y-35;
-        console.log(lipsX , lipsY)
+        noseX=results[0].pose.nose.x-35;
+        noseY=results[0].pose.nose.y-35;
+        console.log(noseX , noseY)
     
     }
 }
@@ -32,7 +32,7 @@ function modelLoaded(){
 function draw(){
    image(video , 0 , 0 , 300 , 300)
   
-    image(lips , lipsX , lipsY , 70 , 70)
+    image(nose , noseX , noseY , 70 , 70)
 }
 function take_snapshot(){
     save("MyFilterImage.png")
